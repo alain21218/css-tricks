@@ -1,0 +1,33 @@
+/*
+* - Flex est nouveau : pas compatible avec tous les navigateurs
+*   + Nécessite de fixer la taille du parent
+*
+* - transform:translate est connu des plus anciens navigateurs
+*   + Doit être absolute (peut sortir du parent !)
+*/
+
+
+/* :host {
+  display: flex;
+  height: 100vh;
+} */
+
+.block {
+  height: 200px;
+  width: 200px;
+  background: coral;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.no-flex {
+  position: absolute; /* fonctionne avec fixed */
+  top: 50%; /* déplacer de 50% du PARENT */
+  left: 50%; /* déplacer de 50% du PARENT */
+  transform: translate(-50%, -50%); /* redéplacer de 50% de la taille de l'enfant*/
+}
+
+.flex {
+  margin: auto;
+}

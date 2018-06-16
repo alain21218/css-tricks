@@ -1,0 +1,88 @@
+input {
+  display: block;
+  width: 100%;
+  margin: 10px;
+}
+
+
+
+
+
+/*
+* Sélectionner uniquement les enfants
+*/
+
+ul li {
+  background: #CCC;
+  padding: 10px;
+  text-align: justify;
+  list-style-type: square;
+}
+
+/*
+* Sélectionner les voisins
+*/
+li + li {
+  margin-top: 50px;
+}
+
+/*
+* Sélectionner les élements du même niveau
+*/
+ul ~ div {
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+  background: coral;
+}
+
+/*
+* Sélectionner le dernier élement
+*/
+ul li:last-child::before {
+  content: '(Je suis le dernier élément) ';
+  font-weight: bold;
+  color: darkgoldenrod;
+}
+
+/*
+* Sélectionner le premier élement
+*/
+ul li:first-child::before {
+  content: '(Je suis le premier élément) ';
+  font-weight: bold;
+  color: coral;
+}
+
+/*
+* Sélectionner les pairs/impairs
+*/
+ul li:nth-child(odd) {
+  background: #AAA;
+}
+
+ul li:nth-child(even) {
+  background: coral;
+}
+
+/* 
+* Sélectionner SUR BASE d'un attribut 
+*/
+input[type=text] {
+  background: coral;
+}
+
+/* 
+* Sélectionner un attribut 
+*/
+input::placeholder {
+  font-size: 30px;
+}
+
+/* 
+* Sélectionne avec exclusion 
+*/
+input:not([type=date]) {
+  padding: 20px;
+}
+

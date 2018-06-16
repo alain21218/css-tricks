@@ -1,0 +1,32 @@
+:host {
+  /* Ces variables n'existent que pour ce composant */
+  --bg: #333;
+  --color: white;
+
+  --margin: 10px;
+}
+
+.block {
+  width:  95%;
+  background: var(--bg);
+  cursor: pointer;
+  color: var(--color);
+  padding: 10px;
+  margin: var(--margin);
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.block::before {
+  content: attr(data-text);
+}
+
+.euro::after {
+  content: "€";
+}
+
+.hour::before {
+ content: "il est : "
+}

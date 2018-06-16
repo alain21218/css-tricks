@@ -1,0 +1,38 @@
+/*
+* - Pour limiter la portée de l'enfant (absolute), donner la position relatif au parent
+* - Pour profiter du comportement du text (text-align:center) il faut donner la règle display:inline ou display:inline-block à l'enfant.
+*/
+
+.container {
+  display: block;
+  background: black;
+  height: 100px;
+  margin: 10px;
+}
+
+.child {
+  display: block;
+  background: coral;
+  height: 50px;
+  width: 100px;
+  border: 3px solid white;
+  text-align: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  right: 100px;
+  bottom: 30px;
+}
+
+.inline-center {
+  text-align: center;
+}
+
+.inline-center .child {
+  display: inline-block;
+}

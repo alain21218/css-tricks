@@ -1,0 +1,8 @@
+<button (click)="clearfix = !clearfix">Toggle clearfix</button>
+
+<div class="card" [ngClass]="{ 'clearfix': clearfix }">
+  <p class="content">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+  </p>
+  <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Une image" class="float-right">
+</div>
