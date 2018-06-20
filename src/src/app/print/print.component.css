@@ -1,0 +1,18 @@
+* {
+  -webkit-print-color-adjust: exact;
+}
+
+th {
+  background: coral;
+  color: white;
+}
+
+@media print {
+  nav, button {
+    display: none;
+  }
+
+  td:nth-child(3), th:nth-child(3) {
+    display: none;
+  }
+} 

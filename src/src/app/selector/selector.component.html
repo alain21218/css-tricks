@@ -1,0 +1,67 @@
+<table>
+  <caption>table</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>
+				<table>
+          <caption>subtable</caption>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<form>
+	<input type="text" placeholder="Text">
+	<input type="number" placeholder="Number">
+	<input type="date" placeholder="Date">
+	<label>
+    <input type="checkbox">
+    <div class="check"></div>
+    Checkbox
+  </label>
+</form>
+
+<div class="spoiler">
+	<button (click)="show = !show">Afficher/cacher</button>
+	<pre *ngIf="show">
+  &lt;div class=&quot;parent&quot;&gt;
+    &lt;h1&gt;Child&lt;/h1&gt;   &lt;!-- h1:first-child, h1:first-of-type --&gt;
+    &lt;div&gt;Child&lt;/div&gt; &lt;!-- div:nth-child(2), div:first-of-type --&gt;
+    &lt;div&gt;Child&lt;/div&gt;
+    &lt;div&gt;Child&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+</div>

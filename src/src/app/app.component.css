@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  margin-top: 50px;
+
+  padding: 20px;
+}
+
+
+@media print {
+  app-navbar {
+    display: none;
+  }
+}

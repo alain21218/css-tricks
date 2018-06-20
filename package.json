@@ -14,7 +14,8 @@
     "@angular/router": "6.0.0",
     "core-js": "2.5.5",
     "rxjs": "6.1.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "bootstrap": "3.3.7"
   },
   "version": "0.0.0",
   "license": "MIT",

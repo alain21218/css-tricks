@@ -1,0 +1,26 @@
+/*
+* Overflow permet de gérer le comportement du conteneur lorsqu'un enfant sort de son conteneur
+* - Hidden : Cacher ce qui sort du conteneur
+* - Auto : S'adapte pour contenir les enfants (Affiche une scrollbar si une taille est spécifée au conteneur
+* - Scroll : Affiche toujours la barre de scroll
+*/
+
+.card {
+  border: 5px solid coral;
+  margin-top: 30px;
+}
+
+.clearfix {
+  /* Cette astuce est appelée "Clearfix" */
+  overflow: auto; 
+}
+
+.content {
+  display: inline-block;
+  width: 45%;
+}
+
+.float-right {
+  float: right;
+  width: 50%;
+}

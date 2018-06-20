@@ -1,0 +1,35 @@
+/*
+*
+* Creer un projet angular avec SASS : ng new my-sassy-app --style=scss
+* Activer SASS dans un projet existant : ng set defaults.styleExt scss
+* cd src/app && for /R %x in (*.css) do ren "%x" *.scss
+* (RETRO COMPATIBLE)
+*
+*/
+
+$grid: 5;
+
+@for $i from 1 through $grid {
+    .sm-#{$i} {
+        flex-basis: calc((100%/#{$grid})*#{$i});
+    }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through $grid {
+    .md-#{$i} {
+        flex-basis: calc((100%/#{$grid})*#{$i});
+    }
+  }
+}
+
+.grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  
+  div {
+    border: 1px solid coral;
+    padding: 10px;
+  }
+}
