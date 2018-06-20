@@ -15,11 +15,14 @@ import { VariableComponent } from './variable/variable.component';
 import { CenterComponent } from './center/center.component';
 import { SelectorComponent } from './selector/selector.component';
 import { MediaComponent } from './media/media.component';
+import { BootstrapComponent } from './bootstrap/bootstrap.component';
+import { SassComponent } from './sass/sass.component';
+import { PrintComponent } from './print/print.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(ROUTES) ],
-  declarations: [ AppComponent, ClearfixComponent, NavbarComponent, AnimComponent, PseudoComponent, PositionComponent, VariableComponent, CenterComponent, SelectorComponent, MediaComponent ],
+  declarations: [ AppComponent, ClearfixComponent, NavbarComponent, AnimComponent, PseudoComponent, PositionComponent, VariableComponent, CenterComponent, SelectorComponent, MediaComponent, BootstrapComponent, SassComponent, PrintComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

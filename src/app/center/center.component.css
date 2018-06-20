@@ -6,18 +6,27 @@
 *   + Doit être absolute (peut sortir du parent !)
 */
 
+.container {
+  height: 300px;
+  width: 100vw;
+  background: #CCC;
+  margin-top: 5px;
+}
 
-/* :host {
+.container:nth-child(1) {
+  position: relative;
+}
+
+.container:nth-child(2) {
   display: flex;
-  height: 100vh;
-} */
+}
 
 .block {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   background: coral;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   padding: 10px;
 }
 

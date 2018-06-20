@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  border-collapse: collapse;  
+  margin-bottom: 30px;
+}
+
+table th {
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+table td {
+  font-size: 20px;
+}
+
+table td, table th {
+  border: 2px solid black;
+  padding: 10px 5px;
+}
+
+table td::before {
+  content: 'td';
+}
+
+table th::before {
+  content: 'th';
+}
+
+
+/* INPUT */
+input {
+  display: block;
+  width: 100%;
+  margin: 10px;
+  padding: 15px 5px;
+}
+
+/* SPOILER */
+.spoiler {
+  margin-top: 50px;
+}

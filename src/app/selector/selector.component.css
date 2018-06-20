@@ -1,88 +1,192 @@
-input {
-  display: block;
-  width: 100%;
-  margin: 10px;
-}
-
-
-
-
-
 /*
-* Sélectionner uniquement les enfants
+*
+* DECOMMENTER UNE REGLE POUR VOIR SON EFFET (CTRL + K + U)
+* REF: https://www.w3schools.com/CSSref/css_selectors.asp
+*
 */
 
-ul li {
-  background: #CCC;
-  padding: 10px;
-  text-align: justify;
-  list-style-type: square;
-}
+/* --------------------- */
 
 /*
-* Sélectionner les voisins
+* Sélectionner élements enfant DIRECTS
 */
-li + li {
-  margin-top: 50px;
-}
+
+/* :host > table > tbody > tr > td {
+  border-color: coral;
+} */
+
+/* --------------------- */
+
+/*
+* Sélectionner les éléments qui sont des voisins
+*/
+
+/* td + td {
+  background: coral;
+  color: white;
+} */
+
+/* --------------------- */
 
 /*
 * Sélectionner les élements du même niveau
 */
-ul ~ div {
-  display: inline-block;
-  height: 100px;
-  width: 300px;
+
+/* td ~ td {
   background: coral;
-}
+  color: white;
+} */
+
+/* --------------------- */
 
 /*
 * Sélectionner le dernier élement
 */
-ul li:last-child::before {
-  content: '(Je suis le dernier élément) ';
-  font-weight: bold;
-  color: darkgoldenrod;
-}
 
-/*
-* Sélectionner le premier élement
-*/
-ul li:first-child::before {
-  content: '(Je suis le premier élément) ';
-  font-weight: bold;
-  color: coral;
-}
-
-/*
-* Sélectionner les pairs/impairs
-*/
-ul li:nth-child(odd) {
-  background: #AAA;
-}
-
-ul li:nth-child(even) {
+/* table td:last-child {
   background: coral;
-}
+  color: white;
+} */
+
+/* table td:last-of-type {
+  background: coral;
+  color: white;
+} */
+
+/* --------------------- */
+
+/* table td:first-child {
+  background: coral;
+  color: white;
+} */
+
+/* table td:first-of-type {
+  background: coral;
+  color: white;
+} */
+
+/* --------------------- */
+
+/* table tbody tr:nth-child(1) {
+  background: coral;
+  color: white;
+} */
+
+/* table tr:nth-child(1) {
+  background: coral;
+  color: white;
+} */
+
+/* table tbody tr:nth-child(odd) {
+  background: coral;
+  color: white;
+} */
+
+/* table tbody tr:nth-child(even) {
+  background: #e74c3c;
+  color: white;
+} */
+
+/* --------------------- */
 
 /* 
 * Sélectionner SUR BASE d'un attribut 
 */
-input[type=text] {
-  background: coral;
-}
+
+/* input[type=text] {
+  border: 3px solid coral;
+} */
+
+/* --------------------- */
 
 /* 
 * Sélectionner un attribut 
 */
-input::placeholder {
-  font-size: 30px;
-}
+
+/* input::placeholder {
+  color: coral;
+  font-size: 20px;
+  font-weight: bold;
+} */
+
+/* --------------------- */
 
 /* 
 * Sélectionne avec exclusion 
 */
-input:not([type=date]) {
-  padding: 20px;
+
+/* input:not([type=number]) {
+  border: 3px solid coral;
+} */
+
+/* --------------------- */
+
+/* 
+* Sélectionne la sélection du user 
+*/
+
+/* *::-moz-selection {
+  color: white;
+  background: coral;
+} */
+
+/* --------------------- */
+
+/* 
+* Sélectionne la preéière lettre
+*/
+
+/* caption::first-letter {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+} */
+
+/* 
+*
+* Cas concret
+*
+*/
+
+label {
+  cursor: pointer;
 }
 
+input[type=checkbox] {
+  /* Une des manière de cacher une checkbox */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  /* d'autres */
+  display: none;
+  visibility: hidden;
+  opacity: 0; 
+}
+
+input[type=checkbox] ~ .check {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid coral;
+  vertical-align: middle;
+  margin-left: 10px;
+
+  /* Supprimer la sélection au double clique*/
+  user-select: none;
+}
+
+input[type=checkbox]:checked ~ .check {
+  background: coral;
+  color: White;
+
+  /* Limiter la portée des enfants (ici, before) */
+  position: relative;
+}
+
+input[type=checkbox]:checked ~ .check::before {
+  content: '✔';
+  margin: auto;
+  position: absolute;
+  top: -3px;
+  left: 3px;
+}

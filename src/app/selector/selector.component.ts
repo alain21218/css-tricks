@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selector.component.css']
 })
 export class SelectorComponent implements OnInit {
-
+  show = false;
   constructor() { }
 
   ngOnInit() {

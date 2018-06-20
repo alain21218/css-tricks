@@ -4,30 +4,35 @@ div {
   background: coral;
   display: inline-block;
   margin: 10px;
+  padding-top: 30px;
+  text-align: center;
+  color: white;
+}
+
+div::before {
+  content: 'default';
 }
 
 @media screen and (max-width: 840px) {
   div {
     height: 200px;
     width: 200px;
-    background: black;
+    background: #27ae60;
   }
 
   div::before {
     content: 'width < 840px';
-    color: white;
   }
 }
 
 @media screen and (max-width: 740px) {
   div {
     height: 100px;
-    width: 100px;
-    background: yellow;
+    width: 150px;
+    background: #e74c3c;
   }
 
   div::before {
     content: 'width < 740px';
-    color: black;
   }
 }

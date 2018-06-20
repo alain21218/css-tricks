@@ -5,8 +5,8 @@
 
 .container {
   display: block;
-  background: black;
-  height: 100px;
+  background: #e74c3c;
+  height: 150px;
   margin: 10px;
 }
 
@@ -14,9 +14,10 @@
   display: block;
   background: coral;
   height: 50px;
-  width: 100px;
+  width: 150px;
   border: 3px solid white;
   text-align: center;
+  padding-top: 10px;
 }
 
 .relative {

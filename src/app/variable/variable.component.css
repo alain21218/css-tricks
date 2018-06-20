@@ -1,6 +1,6 @@
 :host {
   /* Ces variables n'existent que pour ce composant */
-  --bg: #333;
+  --bg: coral;
   --color: white;
 
   --margin: 10px;
